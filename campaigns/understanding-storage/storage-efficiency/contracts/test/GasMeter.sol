@@ -5,13 +5,12 @@ import "../Elegy1.sol";
 import "../Elegy2.sol";
 
 contract GasMeter {
-
     function measureSetVerse(
         bytes8 _firstVerse,
         bytes32 _secondVerse,
         address _thirdVerse,
         uint128 _fourthVerse,
-        uint96 _fifthVerse 
+        uint96 _fifthVerse
     ) external returns (uint256) {
         Elegy1 elegy = new Elegy1();
         uint256 initGas = gasleft();
@@ -25,7 +24,7 @@ contract GasMeter {
         uint256 gasSpent = initGas - gasleft();
 
         return gasSpent;
-    } 
+    }
 
     function measurePlay(
         uint32[] memory _lines,
@@ -38,5 +37,4 @@ contract GasMeter {
 
         return gasSpent;
     }
-
 }

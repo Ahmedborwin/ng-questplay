@@ -2,7 +2,6 @@
 pragma solidity ^0.8.19;
 
 contract Elegy2 {
-
     uint32[] public lines;
     uint public totalSum;
 
@@ -12,9 +11,9 @@ contract Elegy2 {
 
     function play(uint nonce) external {
         totalSum = 0;
-        for(uint i = 0; i < lines.length; i++) {
-            totalSum += (i * nonce) * lines[i];
+        uint32[] memory tempArray = lines;
+        for (uint i = 0; i < tempArray.length; i++) {
+            totalSum += (i * nonce) * tempArray[i];
         }
     }
-
 }

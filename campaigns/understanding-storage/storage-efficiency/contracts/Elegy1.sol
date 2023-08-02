@@ -2,14 +2,13 @@
 pragma solidity ^0.8.19;
 
 contract Elegy1 {
-
-    bytes8 public firstVerse;
     bytes32 public secondVerse;
     address public thirdVerse;
-    uint128 public fourthVerse;
     uint96 public fifthVerse;
+    uint128 public fourthVerse;
+    bytes8 public firstVerse;
 
-    function setVerse (
+    function setVerse(
         bytes8 _firstVerse,
         bytes32 _secondVerse,
         address _thirdVerse,
@@ -22,5 +21,4 @@ contract Elegy1 {
         fourthVerse = _fourthVerse;
         fifthVerse = _fifthVerse;
     }
-
 }
