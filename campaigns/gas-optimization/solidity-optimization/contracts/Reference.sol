@@ -2,7 +2,6 @@
 pragma solidity ^0.8.19;
 
 contract Reference {
-
     // You should skip any item equal to SKIP in your sum
     uint256 SKIP;
 
@@ -18,7 +17,6 @@ contract Reference {
     function referenceSumAllExceptSkip(
         uint256[] memory array
     ) public view returns (uint256 sum) {
-
         for (uint256 i = 0; i < array.length; i++) {
             if (array[i] != SKIP) {
                 sum += array[i];
@@ -26,7 +24,5 @@ contract Reference {
         }
 
         return sum;
-
     }
-
 }
