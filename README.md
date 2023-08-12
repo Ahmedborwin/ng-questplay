@@ -8,7 +8,7 @@ Welcome guardian. The road out will be treacherous, but remember, fortune favors
 
 We **highly recommend** that you set up Questplay by following [our tutorial](https://nodeguardians.io/dev-hub?s=devhub-campaigns&sc=tutorial). But here are the brief steps anyways.
 
-1. Create a new private repository `ng-questplay` on Github and leave it empty for now. Then, install [our Github application](https://github.com/apps/node-guardians) on it. dfdf
+1. Create a new private repository `ng-questplay` on Github and leave it empty for now. Then, install [our Github application](https://github.com/apps/node-guardians) on it.
 
     > ⚠ Your repository must be private!
 
