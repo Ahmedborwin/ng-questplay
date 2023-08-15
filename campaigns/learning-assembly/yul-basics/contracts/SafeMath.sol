@@ -43,10 +43,9 @@ contract SafeMath {
         assembly {
             result := mul(lhs, rhs)
 
-            // Check for overflow or underflow
-            // if eq(result, add(0, 1)) {
-            //     revert(0, 0)
-            // }
+            if eq(result, add(0, 1)) {
+                revert(0, 0)
+            }
 
             if eq(result, sub(0, 1)) {
                 revert(0, 0)
@@ -61,16 +60,16 @@ contract SafeMath {
         assembly {
             result := div(lhs, rhs)
 
-            // if or(eq(rhs, 0), lt(rhs, 0)) {
-            //     revert(0, 0)
-            // }
+            if or(eq(rhs, 0), lt(rhs, 0)) {
+                revert(0, 0)
+            }
 
-            // if gt(result, lhs) {
-            //     revert(0, 0)
-            // }
-            // if eq(result, sub(0, 1)) {
-            //     revert(0, 0)
-            // }
+            if gt(result, lhs) {
+                revert(0, 0)
+            }
+            if eq(result, sub(0, 1)) {
+                revert(0, 0)
+            }
         }
     }
 }
