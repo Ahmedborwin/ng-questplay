@@ -10,7 +10,12 @@ contract SafeMath {
             result := add(lhs, rhs)
 
             // Check for overflow or underflow
-            if eq(result, sub(0, 1)) {
+            if lt(result, lhs) {
+                revert(0, 0)
+            }
+            //how to check if rhs is equal to largest number
+
+            if eq(rhs, sub(1, 0)) {
                 revert(0, 0)
             }
         }
