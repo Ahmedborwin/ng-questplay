@@ -72,6 +72,5 @@ contract SafeMath {
             //     revert(0, 0)
             // }
         }
-        return result;
     }
 }

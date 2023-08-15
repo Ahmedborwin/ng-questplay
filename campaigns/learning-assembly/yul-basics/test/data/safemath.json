@@ -16,7 +16,7 @@
       "shouldOverflow": false
     },
     "sub": {
-      "x": -1,
+      "x": 0,
       "y": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
       "shouldOverflow": false
     },
@@ -27,7 +27,7 @@
     },
     "div": {
       "x": "0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-      "y": 1,
+      "y": -1,
       "shouldOverflow": false
     }
   },
