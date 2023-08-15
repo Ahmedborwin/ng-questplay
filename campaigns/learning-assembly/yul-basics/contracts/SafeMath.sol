@@ -15,9 +15,9 @@ contract SafeMath {
             }
             //how to check if rhs is equal to largest number
 
-            if eq(rhs, sub(1, 0)) {
-                revert(0, 0)
-            }
+            // if eq(rhs, sub(1, 0)) {
+            //     revert(0, 0)
+            // }
         }
 
         return result;
