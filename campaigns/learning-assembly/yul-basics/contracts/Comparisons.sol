@@ -2,32 +2,31 @@
 pragma solidity ^0.8.19;
 
 contract Comparisons {
-
     /// @notice Returns value == 0.
     function isZero(int256 value) public pure returns (bool isZero_) {
         assembly {
-
+            //let _var := 0
+            isZero_ := eq(value, 0)
         }
     }
 
     /// @notice Returns lhs > rhs.
-    function greaterThan(uint256 lhs, uint256 rhs)
-        public
-        pure
-        returns (bool greater)
-    {
+    function greaterThan(
+        uint256 lhs,
+        uint256 rhs
+    ) public pure returns (bool greater) {
         assembly {
-
+            greater := gt(lhs, rhs)
         }
     }
 
     /// @notice Returns lhs < rhs.
     function signedLowerThan(
-        int256 lhs, 
+        int256 lhs,
         int256 rhs
     ) public pure returns (bool lower) {
         assembly {
-
+            lower := slt(lhs, rhs)
         }
     }
 
@@ -36,7 +35,9 @@ contract Comparisons {
         int256 value
     ) public pure returns (bool negativeOrEqualTen) {
         assembly {
-
+            let param1 := slt(value, 0)
+            let param2 := eq(value, 10)
+            negativeOrEqualTen := or(param1, param2)
         }
     }
 
@@ -47,7 +48,15 @@ contract Comparisons {
         int256 upper
     ) public pure returns (bool inRange) {
         assembly {
+            let param1 := gt(value, lower)
+            let param2 := eq(value, lower)
+            let param3 := or(param1, param2)
 
+            let param4 := lt(value, upper)
+            let param5 := eq(value, upper)
+            let param6 := or(param4, param5)
+
+            inRange := and(param3, param6)
         }
     }
 }
