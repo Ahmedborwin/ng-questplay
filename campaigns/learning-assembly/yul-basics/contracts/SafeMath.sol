@@ -15,9 +15,9 @@ contract SafeMath {
             }
             //how to check if rhs is equal to largest number
 
-            // if eq(rhs, sub(1, 0)) {
-            //     revert(0, 0)
-            // }
+            if and(or(gt(lhs, 0), gt(rhs, 0)), eq(result, 0)) {
+                revert(0, 0)
+            }
         }
 
         return result;
@@ -31,11 +31,11 @@ contract SafeMath {
         assembly {
             result := sub(lhs, rhs)
 
-            if gt(result, sub(0, 1)) {
+            if gt(result, lhs) {
                 revert(0, 0)
             }
 
-            if gt(result, lhs) {
+            if eq(rhs, sub(0, 1)) {
                 revert(0, 0)
             }
         }
