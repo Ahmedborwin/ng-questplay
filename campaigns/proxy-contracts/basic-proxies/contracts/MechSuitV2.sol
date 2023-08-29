@@ -2,9 +2,8 @@
 pragma solidity ^0.8.19;
 
 contract MechSuitV2 {
-
     // Space reserved for UpgradeableMechSuit to store delegate address
-    bytes32 private DO_NOT_USE; 
+    //bytes32 private DO_NOT_USE;
 
     uint32 public fuel;
     uint8 public ammunition;
@@ -19,6 +18,4 @@ contract MechSuitV2 {
         fuel = 100;
         ammunition = 8;
     }
-
-
 }
