@@ -5,7 +5,6 @@ pragma solidity ^0.8.19;
 contract UpgradeableMechSuit {
     // address public implementation;
     // address internal owner;
-    // new notes
 
     bytes32 internal constant _IMPLEMENTATION_SLOT =
         bytes32(uint256(keccak256("eip1967.proxy.implementation")) - 1);
